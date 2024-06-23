@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a1f5c58745.js"></script>
+    <title>GNIT Ecommerce project</title>
+    <link rel="stylesheet" href="webstyle.css">
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="img/logo.png" alt=""></a>
+        <div>
+            <ul id="navber">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <?php
+                $count=0;
+                if(isset($_SESSION['cart']))
+                {
+                    $count=count($_SESSION['cart']);
+                }
+                ?>
+                        <a href="cart2.html"><img class="logo" src="img/shopping-cart.png" alt="">
+                            <?php echo $count;?>
+                        </a>
+                </li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.php"><img class="logo" src="img/shopping-cart.png" alt=""></a>
+            <i id="bar" class="logo" src="img/more.png" alt=""></i>
+        </div>
+    </section>
+    <section id="prodetails" class="section-p1">
+        <div class="single-pro-image">
+            <img src="img/products/kj10.jpg" width="100%" id="MainImg" alt="">
+            <div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="img/products/kj10.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/products/kj11.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/products/kj12.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <!-- <div class="small-img-col">
+                    <img src="img/products/sw13" width="100%" class="small-img" alt="">
+                </div>  -->
+            </div>
+
+        </div>
+        <form action=manage_cart.php method="POST">
+            <div class="single-pro-details">
+                <h4>Kids winter jacket</h4>
+                <h2>₹525.00</h2>
+                <!-- <select>
+                <option>Select Size</option>
+                <option>S</option>
+                <option>L</option>
+                <option>XL</option>
+                <option>XXL</option>
+            </select> -->
+                <input type="number" value="100">
+                <input type="hidden" name="Item_Name" value="Kids winter jacket">
+                <input type="hidden" name="Price" value="525">
+                <button class="normal" name="Add_To_Cart">Add to Cart</button>
+                <button class="normal">Buy Now</button>
+                <h4>Available Offers</h4>
+                <p><b>Bank Offer5% Cashback on Axis Bank CardT&C <br><br>Buy this product and Get Extra ₹50 Off on Select FansT&C <br><br>Partner OfferSign up for Oceankit Pay Later and get Oceankit Gift Card worth up to ₹500*</b> <span>*Know More</span><br><br><b>Purchase
+                now & get 1 surprise cashback coupon in Future</b> <span>*Know More</span></p>
+            </div>
+        </form>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>Featured Products</h2>
+        <p>Summer collection New Modern Design</p>
+        <div class="pro-container">
+            <div class="pro">
+                <div class="f1">
+                    <img src="img/products/l11.jpg" alt=""></div>
+                <div class="des">
+                    <div class="span">
+                        <span>adidas</span></div>
+                    <h5>cartoon Astronaut T-shirts</h5>
+                    <div class="star">
+                        <img src="img/star.png">
+                        <img src="img/star.png">
+                        <img src="img/star.png">
+                        <img src="img/star.png">
+                        <img src="img/star.png">
+                    </div>
+                    <h4>₹699</h4>
+                    <div class="cart">
+                        <img src="img/shopping-cart (1).png">
+                    </div>
+                </div>
+            </div>
+            <div class="pro">
+                <div class="f1">
+                    <img src="img/products/s10.jpg" alt=""></div>
+                <div class="des">
+                    <div class="span">
+                        <span>adidas</span></div>
+                    <h5>cartoon Astronaut T-shirts</h5>
+                    <div class="star">
+                        <img src="img/star.png">
+                        <img src="img/star.png">
+                        <img src="img/star.png">
+                        <img src="img/star (1).png">
+                        <img src="img/star (1).png">
+                    </div>
+                    <h4>₹735</h4>
+                    <div class="cart">
+                        <img src="img/shopping-cart (1).png">
+                    </div>
+                </div>
+            </div>
+            <div class="pro">
+                <div class="f1">
+                    <img src="img/products/js10.jpg" alt=""></div>
+                <div class="des">
+                    <div class="span">
+                        <span>adidas</span></div>
+                    <h5>cartoon Astronaut T-shirts</h5>
+                    <div class="star">
+                        <img src="img/star.png">
+                        <img src="img/star.png">
+                        <img src="img/star.png">
+                        <img src="img/star (2).png">
+                        <img src="img/star (1).png">
+                    </div>
+                    <h4>₹455</h4>
+                    <div class="cart">
+                        <img src="img/shopping-cart (1).png">
+                    </div>
+                </div>
+            </div>
+            <div class="pro">
+                <div class="f1">
+                    <img src="img/products/fs10.jpg" alt=""></div>
+                <div class="des">
+                    <div class="span">
+                        <span>adidas</span></div>
+                    <h5>cartoon Astronaut T-shirts</h5>
+                    <div class="star">
+                        <img src="img/star.png">
+                        <img src="img/star.png">
+                        <img src="img/star.png">
+                        <img src="img/star (2).png">
+                        <img src="img/star (1).png">
+                    </div>
+                    <h4>₹455</h4>
+                    <div class="cart">
+                        <img src="img/shopping-cart (1).png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class=" newstext ">
+            <h4>Signup for newsletters</h4>
+            <p>Get e-mail updates about our latest shop and <span>special offers</span></p>
+        </div>
+        <div class="form ">
+            <input type="text " placeholder="Your e-mail address ">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo1" src="img/logo.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong> 82/D Barui Para Lane kolkata-700035</p>
+            <p><strong>Phone:</strong>(+91)7003692142/(+91)9748687360</p>
+            <p><strong>Hours: </strong>10:00-18:00, Mon-Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <img class="logo" src="img/facebook.png" alt="">
+                <img class="logo" src="img/twitter.png" alt="">
+                <img class="logo" src="img/instagram.png" alt="">
+                <img class="logo" src="img/youtube.png" alt="">
+
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Orders</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App store or Google play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured payment gateways</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+        <div class="copyright">
+            <p>© 2023, OCEAN Technologies PVT LTD.</p>
+        </div>
+    </footer>
+
+    <script>
+        let MainImg = document.getElementById("MainImg");
+        let smallimg = document.getElementsByClassName("small-img");
+
+        smallimg[0].onclick = function() {
+            MainImg.src = smallimg[0].src;
+        }
+        smallimg[1].onclick = function() {
+            MainImg.src = smallimg[1].src;
+        }
+        smallimg[2].onclick = function() {
+            MainImg.src = smallimg[2].src;
+        }
+        smallimg[3].onclick = function() {
+            MainImg.src = smallimg[3].src;
+        }
+    </script>
+
+    <script src="script.js "></script>
+</body>
+
+</html>
